@@ -22,7 +22,7 @@ const forecast = (latitude, longitude, callback) => {
         if (error) {
             callback(error, undefined)
         } else {
-            callback(undefined, body.current.temperature + ' degrees')
+            callback(undefined, body.current.temperature + ' degrees. Current time is: ' + body.location.localtime)
         }
     })
 }
